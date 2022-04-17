@@ -1,0 +1,57 @@
+.products {
+  width: 502px;
+}
+
+.products__button-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include margin-padding(0, 0);
+  margin-bottom: 20px;
+  background-color: $white;
+  border: 1px solid $l-gray;
+  border-radius: 5px;
+  @include font-face(600, 12px, 20px);
+  text-transform: uppercase;
+  list-style: none;
+}
+.products__button-item {
+  width: 166px;
+  border-right: 1px solid $l-gray;
+  text-align: center;
+
+  &:last-child {
+    border: none;
+    border-top-right-radius: 10px;
+  }
+}
+
+.products__label {
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.products__input:checked + .products__label {
+  background-color: $blue;
+  color: $white;
+}
+
+.products__show-ticket {
+  @include margin-padding(0, 15px 20px);
+  width: 100%;
+  background-color: $blue;
+  color: $white;
+  @include font-face(600, 12px, 20px);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 8px 12px $sh-gray;
+  }
+
+  &:active {
+    box-shadow: 0px 4px 8px $sh-gray;
+  }
+}

@@ -1,0 +1,25 @@
+.direction {
+  display: flex;
+  justify-content: space-between;
+  @include margin-padding(0, 0);
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.direction__wrapper {
+  width: 141px;
+}
+
+.direction__title {
+  @include font-face(600, 12px, 18px);
+  color: $s-gray;
+  text-transform: uppercase;
+}
+
+.direction__subtitle {
+  @include margin-padding(0, 0);
+  @include font-face(600, 14px, 21px);
+}

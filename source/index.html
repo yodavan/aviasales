@@ -8,79 +8,81 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <img class="page-header__logo" src="image/logo.svg" width="60" height="60" alt="Логотип Компании Aviasales">
+    <div class="page-header__wrapper">
+      <img class="page-header__logo" src="image/logo.svg" alt="Логотип Компании Aviasales">
+    </div>
   </header>
   <main class="page-main">
-    <section class="filter">
-      <form class="filter__form form" action="#">
-        <fieldset class="form__search">
-          <legend class="form__legend">Количество Пересадок</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <input class="form__input visually-hidden" type="checkbox" name="all_tickets" id="all_tickets">
-              <label class="form__label" for="all_tickets">Все</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input visually-hidden" type="checkbox" name="without_transfers" id="without_transfers" checked>
-              <label class="form__label" for="without_transfers">Без пересадок</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input visually-hidden" type="checkbox" name="one_transfer" id="one_transfer" checked>
-              <label class="form__label" for="one_transfer">1 пересадка</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input visually-hidden" type="checkbox" name="two_transfer" id="two_transfer" checked>
-              <label class="form__label" for="two_transfer">2 пересадка</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input visually-hidden" type="checkbox" name="three_transfer" id="three_transfer">
-              <label class="form__label" for="three_transfer">3 пересадка</label>
-            </li>
-          </ul>
-        </fieldset>
-      </form>
-    </section>
-    <section class="products">
-      <ul class="products__button-list">
-        <li class="products__button-item">
-          <input class="products__input visually-hidden" type="radio" name="type_radio" id="cheap" value="cheap" checked>
-          <label class="products__label" for="cheap">Самый дешевый</label>
-        </li>
-        <li class="products__button-item">
-          <input class="products__input visually-hidden" type="radio" name="type_radio" id="fast" value="fast">
-          <label class="products__label" for="fast">Самый быстрый</label>
-        </li>
-        <li class="products__button-item">
-          <input class="products__input visually-hidden" type="radio" name="type_radio" id="optimal" value="optimal">
-          <label class="products__label" for="optimal">Оптимальный</label>
-        </li>
-      </ul>
-      <ul class="products__information-list information-list">
-        <li class="information-list__item">
-          <div class="information-list__header">
-            <p class="information-list__price">1200 P</p>
-            <img class="information-list__image" src="image/logo-avia/logo-s7.svg" alt="Логотип компании перевозчика">
-          </div>
-          <div class="information-list__direction">
-            <dl class="information-list__text text">
-              <div class="text__wrapper route">
-                <dt class="information-list__title">MOW – HKT</dt>
-                <dd class="information-list__subtitle">10:45 – 08:00</dd>
+    <div class="page-main__wrapper">
+      <section class="filter">
+        <form class="filter__form form" action="#">
+          <fieldset class="form__search">
+            <legend class="form__legend">Количество Пересадок</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="form__input visually-hidden" type="checkbox" name="all_tickets" id="all_tickets">
+                <label class="form__label" for="all_tickets">Все</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input visually-hidden" type="checkbox" name="without_transfers" id="without_transfers" checked>
+                <label class="form__label" for="without_transfers">Без пересадок</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input visually-hidden" type="checkbox" name="one_transfer" id="one_transfer" checked>
+                <label class="form__label" for="one_transfer">1 пересадка</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input visually-hidden" type="checkbox" name="two_transfer" id="two_transfer" checked>
+                <label class="form__label" for="two_transfer">2 пересадка</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input visually-hidden" type="checkbox" name="three_transfer" id="three_transfer">
+                <label class="form__label" for="three_transfer">3 пересадка</label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+      <section class="products">
+        <ul class="products__button-list">
+          <li class="products__button-item">
+            <input class="products__input visually-hidden" type="radio" name="type_radio" id="cheap" value="cheap" checked>
+            <label class="products__label" for="cheap">Самый дешевый</label>
+          </li>
+          <li class="products__button-item">
+            <input class="products__input visually-hidden" type="radio" name="type_radio" id="fast" value="fast">
+            <label class="products__label" for="fast">Самый быстрый</label>
+          </li>
+          <li class="products__button-item">
+            <input class="products__input visually-hidden" type="radio" name="type_radio" id="optimal" value="optimal">
+            <label class="products__label" for="optimal">Оптимальный</label>
+          </li>
+        </ul>
+        <ul class="products__information-list information-list">
+          <li class="information-list__item">
+            <div class="information-list__header">
+              <p class="information-list__price">1200 P</p>
+              <img class="information-list__image" src="image/logo-avia/logo-s7.svg" alt="Логотип компании перевозчика">
+            </div>
+            <dl class="information-list__direction direction">
+              <div class="direction__wrapper route">
+                <dt class="direction__title">MOW – HKT</dt>
+                <dd class="direction__subtitle">10:45 – 08:00</dd>
               </div>
-              <div class="text__wrapper length">
-                <dt class="information-list__title">В пути</dt>
-                <dd class="information-list__subtitle">21ч 15м</dd>
+              <div class="direction__wrapper length">
+                <dt class="direction__title">В пути</dt>
+                <dd class="direction__subtitle">21ч 15м</dd>
               </div>
-              <div class="text__wrapper stops">
-                <dt class="information-list__title">2 пересадки</dt>
-                <dd class="information-list__subtitle">HKG, JNB</dd>
+              <div class="direction__wrapper stops">
+                <dt class="direction__title">2 пересадки</dt>
+                <dd class="direction__subtitle">HKG, JNB</dd>
               </div>
             </dl>
-          </div>
-        </li>
-      </ul>
-      <button class="products__show-ticket">Показать еще 5 билетов!</button>
-    </section>
+          </li>
+        </ul>
+        <button class="products__show-ticket">Показать еще 5 билетов!</button>
+      </section>
+    </div>
   </main>
 </body>
 </html>

@@ -60,7 +60,7 @@ const server = (done) => {
 
 const copy = (done) => {
   gulp.src([
-    // "source/fonts/*.{woff2,woff}",
+    "source/fonts/*.ttf",
     "source/image/**/*.svg",
     "source/image/logo-avia/*.jpg",
   ], {
