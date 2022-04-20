@@ -1,5 +1,3 @@
-import { tickets } from './data.js';
-
 const formList = document.querySelector('.form__list');
 const formInput = formList.querySelectorAll('.form__input');
 const buttonAllFilters = formList.querySelector('#all_filters');
