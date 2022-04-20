@@ -20,8 +20,8 @@
             <legend class="form__legend">Количество Пересадок</legend>
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__input visually-hidden" type="checkbox" name="all_tickets" id="all_tickets">
-                <label class="form__label" for="all_tickets">Все</label>
+                <input class="form__input visually-hidden" type="checkbox" name="all_filters" id="all_filters">
+                <label class="form__label" for="all_filters">Все</label>
               </li>
               <li class="form__item">
                 <input class="form__input visually-hidden" type="checkbox" name="without_transfers" id="without_transfers" checked>
@@ -33,11 +33,11 @@
               </li>
               <li class="form__item">
                 <input class="form__input visually-hidden" type="checkbox" name="two_transfer" id="two_transfer" checked>
-                <label class="form__label" for="two_transfer">2 пересадка</label>
+                <label class="form__label" for="two_transfer">2 пересадки</label>
               </li>
               <li class="form__item">
                 <input class="form__input visually-hidden" type="checkbox" name="three_transfer" id="three_transfer">
-                <label class="form__label" for="three_transfer">3 пересадка</label>
+                <label class="form__label" for="three_transfer">3 пересадки</label>
               </li>
             </ul>
           </fieldset>
@@ -58,31 +58,40 @@
             <label class="products__label" for="optimal">Оптимальный</label>
           </li>
         </ul>
-        <ul class="products__information-list information-list">
-          <li class="information-list__item">
-            <div class="information-list__header">
-              <p class="information-list__price">1200 P</p>
-              <img class="information-list__image" src="image/logo-avia/logo-s7.svg" alt="Логотип компании перевозчика">
-            </div>
-            <dl class="information-list__direction direction">
-              <div class="direction__wrapper route">
-                <dt class="direction__title">MOW – HKT</dt>
-                <dd class="direction__subtitle">10:45 – 08:00</dd>
-              </div>
-              <div class="direction__wrapper length">
-                <dt class="direction__title">В пути</dt>
-                <dd class="direction__subtitle">21ч 15м</dd>
-              </div>
-              <div class="direction__wrapper stops">
-                <dt class="direction__title">2 пересадки</dt>
-                <dd class="direction__subtitle">HKG, JNB</dd>
-              </div>
-            </dl>
-          </li>
-        </ul>
+        <ul class="products__information-list information-list"></ul>
         <button class="products__show-ticket">Показать еще 5 билетов!</button>
       </section>
     </div>
   </main>
+
+  <!-- Карточка объявления -->
+  <template id="card">
+    <li class="information-list__item">
+      <div class="information-list__header">
+        <p class="information-list__price">1200 P</p>
+        <img class="information-list__image" src="image/logo-avia/s7.png" alt="Логотип компании перевозчика">
+      </div>
+    </li>
+  </template>
+
+  <!-- Информация о полете -->
+  <template id="card-avia">
+    <dl class="information-list__direction direction">
+      <div class="direction__wrapper route">
+        <dt class="direction__title route-title">MOW – HKT</dt>
+        <dd class="direction__subtitle route-subtitle">10:45 – 08:00</dd>
+      </div>
+      <div class="direction__wrapper length">
+        <dt class="direction__title length-title">В пути</dt>
+        <dd class="direction__subtitle length-subtitle">21ч 15м</dd>
+      </div>
+      <div class="direction__wrapper stops">
+        <dt class="direction__title stops-title">2 пересадки</dt>
+        <dd class="direction__subtitle stops-subtitle">HKG, JNB</dd>
+      </div>
+    </dl>
+  </template>
+
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>

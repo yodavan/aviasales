@@ -21,7 +21,6 @@
 
   &:last-child {
     border: none;
-    border-top-right-radius: 10px;
   }
 }
 
@@ -34,6 +33,16 @@
 .products__input:checked + .products__label {
   background-color: $blue;
   color: $white;
+}
+
+.products__button-item:first-child .products__input:checked + .products__label {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.products__button-item:last-child .products__input:checked + .products__label {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .products__show-ticket {

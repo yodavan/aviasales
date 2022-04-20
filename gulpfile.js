@@ -43,7 +43,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html, reload));
-  // gulp.watch("source/js/script.js", gulp.series(script));
+  gulp.watch("source/js/*.js", gulp.series(script));
 }
 
 const server = (done) => {
@@ -63,11 +63,19 @@ const copy = (done) => {
     "source/fonts/*.ttf",
     "source/image/**/*.svg",
     "source/image/logo-avia/*.jpg",
+    "source/image/logo-avia/*.png",
   ], {
     base: "source"
   })
     .pipe(gulp.dest("build"))
   done();
+}
+
+const script = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(terser())
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
 }
 
 const build = gulp.series(
@@ -76,6 +84,7 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
+    script,
   ),gulp.series(
     server,
     watcher
