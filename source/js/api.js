@@ -13,4 +13,3 @@ productButton.addEventListener('change', () => {
 formList.addEventListener('change', () => {
   createAviaSegments( tickets );
 });
-

@@ -61,32 +61,36 @@ const oneTransfer = document.querySelector('#one_transfer');
 const twoTransfer = document.querySelector('#two_transfer');
 const threeTransfer = document.querySelector('#three_transfer');
 
+//Проверка массива на соответствие условию
+const getChecked = ( item, number ) => {
+  return item.segments.every( ( e ) => e.stops.length <= number );
+};
+
 const getFilterTransfer = ( item ) => {
   if ( withoutTransfers.checked ) {
-    if ( item.segments[0].stops.length <= 0 && item.segments[1].stops.length <= 0 ) {
+    if ( getChecked( item, 0 ) ) {
       return item;
     };
   }
 
   if ( oneTransfer.checked ) {
-    if ( item.segments[0].stops.length <= 1 && item.segments[1].stops.length <= 1 ) {
+    if ( getChecked( item, 1 ) ) {
       return item;
     };
   }
 
   if ( twoTransfer.checked ) {
-    if ( item.segments[0].stops.length <= 2 && item.segments[1].stops.length <= 2 ) {
+    if ( getChecked( item, 2 ) ) {
       return item;
     };
   }
 
   if ( threeTransfer.checked ) {
-    if ( item.segments[0].stops.length <= 3 && item.segments[1].stops.length <= 3 ) {
+    if ( getChecked( item, 3 ) ) {
       return item;
     };
   }
-
-}
+};
 
 export { filterArray, formList, getFilterTransfer };
 
